@@ -1,0 +1,33 @@
+﻿﻿﻿@{
+    ViewBag.Title = "分層系統首頁";
+}
+
+<div class="jumbotron">
+    <h1>
+         ASP.NET MVC  - 專案分層架構
+    </h1>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Categotry</h2>
+        <p>
+            instnwnd - Category <br />
+            Index(List), Details, Create, Edit, Delete.
+        </p>
+        <p>
+            <a class="btn btn-primary" href="@Url.Action("Index", "Category")">Category List&raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Product</h2>
+        <p>
+            instnwnd - Product <br />
+            Index(List), Details, Create, Edit, Delete.
+        </p>
+        <p>
+            <a class="btn btn-primary" href="@Url.Action("Index", "Product")">Product List &raquo;</a>
+        </p>
+    </div>
+</div>
