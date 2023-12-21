@@ -17,6 +17,13 @@ namespace MVCDemo_Repository.Web
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+
+            );
+
+            routes.MapRoute(
+                name: "ProductList_Category_Page",                                                // 路由名稱
+                url: "Product/Category/{Category}",  // URL 及參數
+                new { controller = "Product", action = "List", Category = "all" } // 參數預設值
             );
         }
     }
