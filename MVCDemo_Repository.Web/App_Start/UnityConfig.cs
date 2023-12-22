@@ -6,6 +6,8 @@ using MVCDemo_Repository.Service;
 using System;
 
 using Unity;
+using System.Web.Mvc;
+using Unity.AspNet.Mvc;
 
 namespace MVCDemo_Repository.Web
 {
@@ -55,6 +57,7 @@ namespace MVCDemo_Repository.Web
             // Service
             container.RegisterType<ICategoryService, CategoryService>();
             container.RegisterType<IProductService, ProductService>();
+            
         }
     }
 }

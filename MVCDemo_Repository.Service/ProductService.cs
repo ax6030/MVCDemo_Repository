@@ -12,7 +12,11 @@ namespace MVCDemo_Repository.Service
 {
     public class ProductService : IProductService
     {
-        private IRepository<Products> repository = new GenericRepository<Products>();
+        private IRepository<Products> repository;
+        public ProductService()
+        {
+            repository = new GenericRepository<Products>();
+        }
         public IResult Create(Products instance)
         {
             if (instance == null) 

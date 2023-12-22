@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,12 @@ namespace MVCDemo_Repository.Service
 {
     public class CategoryService : ICategoryService
     {
-        private IRepository<Categories> repository = new GenericRepository<Categories>();
+        private IRepository<Categories> repository;
+
+        public CategoryService() 
+        {
+            repository = new GenericRepository<Categories>();
+        }
         public IResult Create(Categories instance)
         {
             if(instance == null)
